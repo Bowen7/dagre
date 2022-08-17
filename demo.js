@@ -12,20 +12,21 @@ g.setDefaultEdgeLabel(function () {
 // Add nodes to the graph. The first argument is the node id. The second is
 // metadata about the node. In this case we're going to add labels to each of
 // our nodes.
-g.setNode("kspacey", { label: "Kevin Spacey", width: 144, height: 100 });
-g.setNode("swilliams", { label: "Saul Williams", width: 160, height: 100 });
-g.setNode("bpitt", { label: "Brad Pitt", width: 108, height: 100 });
-g.setNode("hford", { label: "Harrison Ford", width: 168, height: 100 });
-g.setNode("lwilson", { label: "Luke Wilson", width: 144, height: 100 });
-g.setNode("kbacon", { label: "Kevin Bacon", width: 121, height: 100 });
+g.setNode("a", { label: "Kevin Spacey", width: 144, height: 100 });
+g.setNode("b", { label: "Saul Williams", width: 160, height: 100 });
+g.setNode("c", { label: "Brad Pitt", width: 108, height: 100 });
+g.setNode("d", { label: "Harrison Ford", width: 168, height: 100 });
+g.setNode("e", { label: "Luke Wilson", width: 144, height: 100 });
+g.setNode("f", { label: "Kevin Bacon", width: 121, height: 100 });
 
 // Add edges to the graph.
-g.setEdge("kspacey", "swilliams");
-g.setEdge("swilliams", "kbacon");
-g.setEdge("bpitt", "kbacon");
-g.setEdge("hford", "lwilson");
-g.setEdge("lwilson", "kbacon");
+g.setEdge("a", "b");
+g.setEdge("b", "f");
+g.setEdge("c", "f");
+g.setEdge("d", "e");
+g.setEdge("e", "f");
 dagre.layout(g);
+
 g.nodes().forEach(function (v) {
   console.log("Node " + v + ": " + JSON.stringify(g.node(v)));
 });

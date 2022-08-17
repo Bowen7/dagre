@@ -7,7 +7,7 @@
     "Matthew Dahl (https://github.com/sandersky)"
   ],
   "license": "MIT",
-  "main": "index.js",
+  "main": "demo.js",
   "keywords": [
     "graph",
     "layout"
